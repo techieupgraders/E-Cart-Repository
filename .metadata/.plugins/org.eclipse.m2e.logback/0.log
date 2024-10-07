@@ -1907,3 +1907,53 @@ java.io.FileNotFoundException: J:\Ecart Workspace\.metadata\.plugins\org.eclipse
 	at org.eclipse.core.internal.resources.Workspace.save(Workspace.java:2489)
 	at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor.lambda$1(IDEWorkbenchAdvisor.java:553)
 	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:124)
+2024-10-06 00:32:36,860 [Worker-6: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2024-10-06 00:35:26,977 [Worker-11: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.productcatalogservice:Product-Catalog-Service:0.0.1-SNAPSHOT @ C:\Users\DELL\git\E-Cart-Repository\Product-Catalog-Service\pom.xml.
+2024-10-06 00:35:29,728 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-06 00:35:29,753 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-10-06 00:35:29,759 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\DELL\git\E-Cart-Repository\Product-Catalog-Service\src\test\resources
+2024-10-06 00:35:31,741 [Worker-5: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-06 00:35:31,750 [Worker-5: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-10-06 00:35:31,758 [Worker-5: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\DELL\git\E-Cart-Repository\Product-Catalog-Service\src\test\resources
+2024-10-06 00:37:30,603 [Worker-6: Importing Maven projects] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.dhanush.cart:Cart-Service:0.0.1-SNAPSHOT @ J:\Ecart Workspace\Cart-Service\pom.xml.
+2024-10-06 00:37:31,434 [Worker-6: Importing Maven projects] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.dhanush.price:Price-Service:0.0.1-SNAPSHOT @ J:\Ecart Workspace\Price-Service\pom.xml.
+2024-10-06 00:37:31,602 [Worker-6: Importing Maven projects] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.productcatalogservice:Product-Catalog-Service:0.0.1-SNAPSHOT @ J:\Ecart Workspace\Product-Catalog-Service\pom.xml.
+2024-10-06 00:37:33,679 [Worker-6: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Price-Service/src/main/java
+2024-10-06 00:37:33,684 [Worker-6: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /Price-Service/src/main/resources
+2024-10-06 00:37:33,685 [Worker-6: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /Price-Service/src/main/resources
+2024-10-06 00:37:33,687 [Worker-6: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Price-Service/src/test/java
+2024-10-06 00:37:33,689 [Worker-6: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /Price-Service/src/test/resources
+2024-10-06 00:37:34,786 [Worker-6: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Product-Catalog-Service/src/main/java
+2024-10-06 00:37:34,787 [Worker-6: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /Product-Catalog-Service/src/main/resources
+2024-10-06 00:37:34,795 [Worker-6: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /Product-Catalog-Service/src/main/resources
+2024-10-06 00:37:34,796 [Worker-6: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Product-Catalog-Service/src/test/java
+2024-10-06 00:37:34,798 [Worker-6: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /Product-Catalog-Service/src/test/resources
+2024-10-06 00:37:35,393 [Worker-6: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Cart-Service/src/main/java
+2024-10-06 00:37:35,394 [Worker-6: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /Cart-Service/src/main/resources
+2024-10-06 00:37:35,395 [Worker-6: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /Cart-Service/src/main/resources
+2024-10-06 00:37:35,396 [Worker-6: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Cart-Service/src/test/java
+2024-10-06 00:37:35,398 [Worker-6: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /Cart-Service/src/test/resources
+2024-10-06 00:37:35,845 [Worker-6: Importing Maven projects] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 3 project(s) in 7 sec
+2024-10-06 00:37:35,967 [Worker-19: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2024-10-06 00:37:37,725 [Worker-19: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.dhanush.cart:Cart-Service:0.0.1-SNAPSHOT @ J:\Ecart Workspace\Cart-Service\pom.xml.
+2024-10-06 00:37:38,984 [Worker-19: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.productcatalogservice:Product-Catalog-Service:0.0.1-SNAPSHOT @ J:\Ecart Workspace\Product-Catalog-Service\pom.xml.
+2024-10-06 00:37:40,912 [Worker-19: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Cart-Service/src/main/java
+2024-10-06 00:37:40,913 [Worker-19: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /Cart-Service/src/main/resources
+2024-10-06 00:37:40,915 [Worker-19: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /Cart-Service/src/main/resources
+2024-10-06 00:37:40,916 [Worker-19: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Cart-Service/src/test/java
+2024-10-06 00:37:40,917 [Worker-19: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /Cart-Service/src/test/resources
+2024-10-06 00:37:41,423 [Worker-19: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Product-Catalog-Service/src/main/java
+2024-10-06 00:37:41,424 [Worker-19: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /Product-Catalog-Service/src/main/resources
+2024-10-06 00:37:41,426 [Worker-19: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /Product-Catalog-Service/src/main/resources
+2024-10-06 00:37:41,428 [Worker-19: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Product-Catalog-Service/src/test/java
+2024-10-06 00:37:41,429 [Worker-19: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /Product-Catalog-Service/src/test/resources
+2024-10-06 00:37:42,323 [Worker-19: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed for 2 poms: local refresh takes 0.00 sec, refresh facades takes 4.00 sec, update config takes 1.00 sec 
+2024-10-06 00:37:43,190 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-06 00:37:43,239 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-10-06 00:37:43,324 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory J:\Ecart Workspace\Cart-Service\src\test\resources
+2024-10-06 00:37:44,302 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-06 00:37:44,337 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-10-06 00:37:44,343 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory J:\Ecart Workspace\Price-Service\src\test\resources
+2024-10-06 00:37:45,083 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-06 00:37:45,110 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-10-06 00:37:45,116 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes

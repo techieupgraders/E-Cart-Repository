@@ -1,0 +1,24 @@
+/.metadata/
+
+# Ignore Maven/Gradle build files
+target/
+*.jar
+*.war
+*.iml
+*.class
+
+# Ignore IntelliJ IDEA project files
+.idea/
+*.iml
+
+# Ignore Eclipse IDE project files
+.project
+.classpath
+.settings/
+
+# Ignore sensitive configuration files
+/Cart-Service/src/main/resources/application.properties
+
+# Ignore logs and temporary files
+*.log
+*.tmp
