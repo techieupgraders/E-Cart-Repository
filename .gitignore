@@ -16,9 +16,6 @@ target/
 .classpath
 .settings/
 
-# Ignore sensitive configuration files
-/Cart-Service/src/main/resources/application.properties
-
 # Ignore logs and temporary files
 *.log
 *.tmp
