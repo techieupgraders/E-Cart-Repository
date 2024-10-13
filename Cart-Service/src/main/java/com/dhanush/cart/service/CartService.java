@@ -1,5 +1,7 @@
 package com.dhanush.cart.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -26,5 +28,15 @@ public class CartService {
 		ItemLine itl = new ItemLine(itemline.getItem(), itemline.getQty());
 		cart.save(user, itl);
 		return itl;
+	}
+	
+	public List<ItemLine> getItemLineForUser(String user){
+		List<ItemLine> itemLineList = cart.findAll(user);
+		return itemLineList;
+	}
+
+	public Boolean deleteCartForUser(String user) {
+		Boolean clear = cart.clear(user);
+		return clear;
 	}
 }
