@@ -23,8 +23,7 @@ public class CarRepositoryImpl {
 	private ListOperations<String, ItemLine> listOps;
 
 	public ItemLine save(String user, ItemLine itemLine) {
-		listOps.rightPush(user, itemLine);
-		//listOps.leftPush(user, itemLine);
+		listOps.rightPush(user, itemLine); // ["a","b","c",...]
 		return itemLine;
 	}
 
