@@ -1,0 +1,4 @@
+.metadata/
+
+# Ignore sensitive configuration files
+Cart-Service/src/main/resources/application.properties

@@ -3,6 +3,7 @@ package com.dhanush.cart.repository;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.data.redis.core.ListOperations;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Repository;
@@ -15,6 +16,7 @@ import jakarta.annotation.Resource;
 public class CarRepositoryImpl {
 
 	@Autowired
+	@Qualifier(value = "redisTemplate")
 	private RedisTemplate<String, String> template;
 
 	// inject the template as ListOperations
@@ -23,8 +25,7 @@ public class CarRepositoryImpl {
 	private ListOperations<String, ItemLine> listOps;
 
 	public ItemLine save(String user, ItemLine itemLine) {
-		listOps.rightPush(user, itemLine);
-		//listOps.leftPush(user, itemLine);
+		listOps.rightPush(user, itemLine); // ["a","b","c",...]
 		return itemLine;
 	}
 
@@ -32,7 +33,9 @@ public class CarRepositoryImpl {
 		return listOps.range(user, 0, -1);
 	}
 
-	public void clear(String user) {
-		template.delete(user);
+	public Boolean clear(String user) {
+		Boolean delete = template.delete(user);
+		return delete;
 	}
+	
 }

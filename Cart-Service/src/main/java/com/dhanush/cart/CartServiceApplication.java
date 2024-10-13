@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
 @EnableFeignClients
-@RestController
 public class CartServiceApplication {
 
 	public static void main(String[] args) {
