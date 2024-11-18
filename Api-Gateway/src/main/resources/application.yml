@@ -5,7 +5,9 @@ spring:
     gateway:
       discovery:
         locator:
-          enabled: true
+          enabled: false
+          lowerCaseServiceId: true
+    
 eureka:
   client:
     register-with-eureka: true
