@@ -35,3 +35,11 @@ management:
       enabled: true
     info:
       enabled: true
+
+resilience4j.circuitbreaker:
+  configs:
+    ProductCatalogServiceCB:
+      slidingWindowSize: 10
+      permittedNumberOfCallsInHalfOpenState: 2
+      failureRateThreshold: 50
+      waitDurationInOpenState: 10000
