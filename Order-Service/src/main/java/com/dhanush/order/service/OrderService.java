@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import com.dhanush.order.controller.OrderFeign;
 import com.dhanush.order.model.ItemLine;
 import com.dhanush.order.model.Order;
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 
 @Service
 public class OrderService {
@@ -17,6 +18,7 @@ public class OrderService {
 	@Autowired
 	private OrderFeign orderFeign;
 
+	@CircuitBreaker(name = "orderService", fallbackMethod = "fallbackretrieveOrder")
 	public Order retrieveOrder(String user) {
 		List<ItemLine> cart = orderFeign.getCart(user);
 		Double totalAmount = 0.0;
@@ -30,6 +32,15 @@ public class OrderService {
 		order.setUser(user);
 
 		return order;
+	}
+	
+	public Order fallbackretrieveOrder(String user,Throwable throwable) {
+		Order dummyOrder = new Order();
+		dummyOrder.setId(0);
+		dummyOrder.setAmount(0);
+		dummyOrder.setDate(LocalDateTime.now());
+		dummyOrder.setUser("Fallback User");
+		return dummyOrder;
 	}
 
 }

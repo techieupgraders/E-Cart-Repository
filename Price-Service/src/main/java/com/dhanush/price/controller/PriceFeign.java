@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestHeader;
 
 import com.dhanush.price.config.FeignConfig;
 
-@FeignClient(name = "Product-Catalog-Service", configuration = FeignConfig.class)
+@FeignClient(name = "Product-Catalog-Service", configuration = FeignConfig.class, fallback = ProdCatalogFallback.class)
 public interface PriceFeign {
 	
 	@GetMapping("/api/price/{id}")

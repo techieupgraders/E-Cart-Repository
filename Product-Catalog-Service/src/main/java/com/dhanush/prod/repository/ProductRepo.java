@@ -15,6 +15,6 @@ public interface ProductRepo extends JpaRepository<Product, Integer>{
 
 	List<Product> findByNameContainingIgnoreCase(char letter);
 	
-	@Query(nativeQuery = true,value="select p.price from Product p where p.id=:id")
+	@Query(nativeQuery = true,value="select p.price from productcatalogdb.product p where p.id=:id")
 	Optional<Double> getPriceByProductId(int id);
 }

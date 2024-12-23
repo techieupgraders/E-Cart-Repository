@@ -32,23 +32,23 @@ public class SecurityFilterConfig {
 	
 	@Bean
     public SecurityWebFilterChain springSecurityFilterChain(ServerHttpSecurity serverHttpSecurity) {
-        serverHttpSecurity.authorizeExchange(exchanges -> exchanges.pathMatchers(HttpMethod.GET).permitAll()
-                .pathMatchers("/e-cart/product-catalog-service/**").hasRole("USER")
-                .pathMatchers("/e-cart/price-service/**").hasRole("ADMIN")
-                .pathMatchers("/e-cart/cart-service/**").hasRole("USER")
-        		.pathMatchers("/e-cart/order-service/**").hasRole("USER"))
-                .oauth2ResourceServer(oAuth2ResourceServerSpec -> oAuth2ResourceServerSpec
-                        .jwt(jwtSpec -> jwtSpec.jwtAuthenticationConverter(grantedAuthoritiesExtractor())));
+//        serverHttpSecurity.authorizeExchange(exchanges -> exchanges.pathMatchers(HttpMethod.GET).permitAll()
+//                .pathMatchers("/e-cart/product-catalog-service/**").hasRole("USER")
+//                .pathMatchers("/e-cart/price-service/**").hasRole("ADMIN")
+//                .pathMatchers("/e-cart/cart-service/**").hasRole("USER")
+//        		.pathMatchers("/e-cart/order-service/**").hasRole("USER"))
+//                .oauth2ResourceServer(oAuth2ResourceServerSpec -> oAuth2ResourceServerSpec
+//                        .jwt(jwtSpec -> jwtSpec.jwtAuthenticationConverter(grantedAuthoritiesExtractor())));
         serverHttpSecurity.csrf(csrfSpec -> csrfSpec.disable());
         return serverHttpSecurity.build();
     }
 	
-	private Converter<Jwt, Mono<AbstractAuthenticationToken>> grantedAuthoritiesExtractor() {
-        JwtAuthenticationConverter jwtAuthenticationConverter =
-                new JwtAuthenticationConverter();
-        jwtAuthenticationConverter.setJwtGrantedAuthoritiesConverter
-                (new KeycloakRoleConverter());
-        return new ReactiveJwtAuthenticationConverterAdapter(jwtAuthenticationConverter);
-    }
+//	private Converter<Jwt, Mono<AbstractAuthenticationToken>> grantedAuthoritiesExtractor() {
+//        JwtAuthenticationConverter jwtAuthenticationConverter =
+//                new JwtAuthenticationConverter();
+//        jwtAuthenticationConverter.setJwtGrantedAuthoritiesConverter
+//                (new KeycloakRoleConverter());
+//        return new ReactiveJwtAuthenticationConverterAdapter(jwtAuthenticationConverter);
+//    }
 	
 }

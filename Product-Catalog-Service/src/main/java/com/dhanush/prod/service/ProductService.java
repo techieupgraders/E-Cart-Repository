@@ -83,7 +83,6 @@ public class ProductService {
 	}
 
 	public Double getPriceByProductId(int id) {
-		
 		Double price = productRepo.getPriceByProductId(id)
 				.orElseThrow(() -> new ResourceNotFoundException("Product", "id", String.valueOf(id)));
 

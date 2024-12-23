@@ -59,7 +59,7 @@ public class RestControllerproduct {
 	}
 	
 	@GetMapping(value = "/api/price/{id}")
-	public Double getPriceByProductId(@PathVariable int id,@RequestHeader("TRACKING_ID") String trackingId) {
+	public Double getPriceByProductId(@PathVariable int id,@RequestHeader("TRACKING_ID") String trackingId){
 		logger.debug("getPriceByProductId - Tracking ID found : "+trackingId);
 		Double price =productService.getPriceByProductId(id);
 		return price;
