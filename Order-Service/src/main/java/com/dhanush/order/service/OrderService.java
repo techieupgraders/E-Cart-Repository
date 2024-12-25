@@ -20,14 +20,14 @@ public class OrderService {
 
 	@CircuitBreaker(name = "orderService", fallbackMethod = "fallbackretrieveOrder")
 	public Order retrieveOrder(String user) {
-		List<ItemLine> cart = orderFeign.getCart(user);
-		Double totalAmount = 0.0;
+		String totalAmount = orderFeign.getTotalAmountForUser("getDoubleAmount",user);
+//		Double totalAmount = 0.0;
+//		for (ItemLine itemLine : cart) {
+//			totalAmount = itemLine.getItem().getItemtotal() + totalAmount;
+//		}
 		Order order = new Order();
 		order.setId(1000000000 + new Random().nextInt(900000000));
-		for (ItemLine itemLine : cart) {
-			totalAmount = itemLine.getItem().getItemtotal() + totalAmount;
-		}
-		order.setAmount(totalAmount);
+		order.setAmount(Double.parseDouble(totalAmount));
 		order.setDate(LocalDateTime.now());
 		order.setUser(user);
 

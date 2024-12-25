@@ -27,10 +27,15 @@ public class CartController {
 	private CartService cartService;
 
 	@PostMapping("/api/cart/{user}")
-	public ItemLine saveCart(@RequestHeader("TRACKING_ID") String trackingId,@RequestBody ItemLine itemline, @PathVariable String user) {
+	public String saveCart(@RequestHeader("TRACKING_ID") String trackingId,@RequestBody ItemLine itemline, @PathVariable String user) {
 		logger.debug("saveCart - Tracking ID found : "+trackingId);
-		ItemLine saveItemLine = cartService.saveCart(trackingId,itemline,user);
-		return saveItemLine;	
+		ResponseEntity<?> cartResponse = cartService.saveCart(trackingId,itemline,user);
+		if(cartResponse.getBody() instanceof ItemLine) {
+			String response = "Item Saved. Total Amount for the product : "+((ItemLine) cartResponse.getBody()).getItem().getName()+" is "+((ItemLine) cartResponse.getBody()).getItem().getItemtotal();
+		return response;
+		}else {
+			return (String) cartResponse.getBody();
+		}
 	}
 	
 	@GetMapping("/api/cart/{user}")
@@ -43,5 +48,18 @@ public class CartController {
 	public ResponseEntity<Boolean> deleteCart(@PathVariable String user){
 		Boolean deleteCartForUser = cartService.deleteCartForUser(user);
 		return new ResponseEntity<Boolean>(deleteCartForUser,HttpStatus.OK);
+	}
+	
+	@GetMapping("/api/cart/total/{user}")
+	public ResponseEntity<?> getTotalAmountForUser(
+	@RequestHeader(value="Caller-Service",required = false) String callerService,
+	@PathVariable String user){
+		Double totalAmountForUser = cartService.getTotalAmountForUser(user);
+		String response = "Total Cart Amount for the User : "+user+" is "+totalAmountForUser;
+		if("getDoubleAmount".equalsIgnoreCase(callerService)) {
+			return ResponseEntity.ok(totalAmountForUser);
+		}else {
+			return ResponseEntity.ok(response);
+		}
 	}
 }
