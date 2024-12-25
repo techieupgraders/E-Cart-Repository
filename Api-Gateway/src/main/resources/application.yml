@@ -9,7 +9,7 @@ spring:
           lowerCaseServiceId: true
       httpclient:
         connect-timeout: 1000
-        response-timeout: 2s
+        response-timeout: 3s
   security:
     oauth2:
       resourceserver:
@@ -46,3 +46,7 @@ resilience4j.circuitbreaker:
       permittedNumberOfCallsInHalfOpenState: 2
       failureRateThreshold: 50
       waitDurationInOpenState: 10000
+resilience4j.timelimiter:
+  configs:
+    CartServiceCB:
+      timeout-duration: 3s
