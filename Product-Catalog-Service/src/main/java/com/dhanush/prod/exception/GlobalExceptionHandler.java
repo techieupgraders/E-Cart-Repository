@@ -49,4 +49,16 @@ public class GlobalExceptionHandler  extends ResponseEntityExceptionHandler {
         );
         return new ResponseEntity<>(errorResponseDTO, HttpStatus.BAD_REQUEST);
     }
+    
+    @ExceptionHandler(AuthInterceptorException.class)
+    public ResponseEntity<ErrorResponseDto> handleDuplicateProductsNotAllowedException(AuthInterceptorException exception,
+                                                                                 WebRequest webRequest) {
+        ErrorResponseDto errorResponseDTO = new ErrorResponseDto(
+                webRequest.getDescription(false),
+                HttpStatus.UNAUTHORIZED,
+                exception.getMessage(),
+                LocalDateTime.now()
+        );
+        return new ResponseEntity<>(errorResponseDTO, HttpStatus.UNAUTHORIZED);
+    }
 }
